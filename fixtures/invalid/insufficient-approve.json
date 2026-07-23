@@ -1,0 +1,28 @@
+{
+  "contract_type": "risk-attestation",
+  "expected_layer": "semantic",
+  "name": "insufficient-approve",
+  "record": {
+    "asset_id": "asset.synthetic.001",
+    "attestation_id": "att.synthetic.001",
+    "chain_id": "31337",
+    "confidence": "0.8",
+    "decision_code": "approve",
+    "evidence_ids": [
+      "ev.synthetic.001",
+      "ev.synthetic.002"
+    ],
+    "evidence_root": "0x3434343434343434343434343434343434343434343434343434343434343434",
+    "evidence_sufficiency": "insufficient",
+    "expires_at": "2025-03-08T12:00:00Z",
+    "issued_at": "2025-03-01T12:00:00Z",
+    "model_version": "1.2.0",
+    "nonce": "42",
+    "provider": "0x5656565656565656565656565656565656565656",
+    "recommended_haircut_bps": 750,
+    "risk_score": "0.275",
+    "schema_version": "1.0.0",
+    "signature": "0x1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+    "verifying_contract": "0x7878787878787878787878787878787878787878"
+  }
+}

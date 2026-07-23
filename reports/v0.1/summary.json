@@ -1,0 +1,8 @@
+{
+  "contracts": 5,
+  "fixtures": 20,
+  "golden_vectors": 5,
+  "migrations": 2,
+  "passed": true,
+  "release": "v0.1"
+}

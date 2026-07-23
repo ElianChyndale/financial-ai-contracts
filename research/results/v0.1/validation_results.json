@@ -1,0 +1,167 @@
+{
+  "fixture_count": 20,
+  "passed": true,
+  "release": "v0.1",
+  "results": [
+    {
+      "contract_type": "benchmark-case",
+      "expected": "valid",
+      "fixture": "fixtures/valid/benchmark-case.json",
+      "issue_count": 0,
+      "observed": "valid",
+      "passed": true
+    },
+    {
+      "contract_type": "evidence-unit",
+      "expected": "valid",
+      "fixture": "fixtures/valid/evidence-unit.json",
+      "issue_count": 0,
+      "observed": "valid",
+      "passed": true
+    },
+    {
+      "contract_type": "experiment-record",
+      "expected": "valid",
+      "fixture": "fixtures/valid/experiment-record.json",
+      "issue_count": 0,
+      "observed": "valid",
+      "passed": true
+    },
+    {
+      "contract_type": "risk-attestation",
+      "expected": "valid",
+      "fixture": "fixtures/valid/risk-attestation.json",
+      "issue_count": 0,
+      "observed": "valid",
+      "passed": true
+    },
+    {
+      "contract_type": "valuation-scenario",
+      "expected": "valid",
+      "fixture": "fixtures/valid/valuation-scenario.json",
+      "issue_count": 0,
+      "observed": "valid",
+      "passed": true
+    },
+    {
+      "contract_type": "benchmark-case",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/answerable-without-answer.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "valuation-scenario",
+      "expected": "invalid:schema",
+      "fixture": "fixtures/invalid/bad-currency.json",
+      "issue_count": 1,
+      "observed": "invalid:schema",
+      "passed": true
+    },
+    {
+      "contract_type": "evidence-unit",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/bounding-box-order.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "valuation-scenario",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/cash-flow-before-valuation.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "valuation-scenario",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/cash-flow-order.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "experiment-record",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/completion-before-start.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "experiment-record",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/duplicate-metric.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "risk-attestation",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/insufficient-approve.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "experiment-record",
+      "expected": "invalid:schema",
+      "fixture": "fixtures/invalid/naive-timestamp.json",
+      "issue_count": 1,
+      "observed": "invalid:schema",
+      "passed": true
+    },
+    {
+      "contract_type": "valuation-scenario",
+      "expected": "invalid:schema",
+      "fixture": "fixtures/invalid/noncanonical-decimal.json",
+      "issue_count": 1,
+      "observed": "invalid:schema",
+      "passed": true
+    },
+    {
+      "contract_type": "risk-attestation",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/risk-expired-at-issue.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "risk-attestation",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/uint256-overflow.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "benchmark-case",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/unanswerable-with-answer.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    },
+    {
+      "contract_type": "evidence-unit",
+      "expected": "invalid:schema",
+      "fixture": "fixtures/invalid/unknown-field.json",
+      "issue_count": 1,
+      "observed": "invalid:schema",
+      "passed": true
+    },
+    {
+      "contract_type": "evidence-unit",
+      "expected": "invalid:semantic",
+      "fixture": "fixtures/invalid/valid-time-order.json",
+      "issue_count": 1,
+      "observed": "invalid:semantic",
+      "passed": true
+    }
+  ]
+}

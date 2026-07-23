@@ -1,0 +1,23 @@
+{
+  "assetId": "asset.synthetic.001",
+  "chainId": 31337,
+  "confidence": "0.8",
+  "decision": "review",
+  "evidenceIds": [
+    "ev.synthetic.001",
+    "ev.synthetic.002"
+  ],
+  "evidenceRoot": "0x3434343434343434343434343434343434343434343434343434343434343434",
+  "evidenceSufficiency": "sufficient",
+  "expiresAt": "2025-03-08T12:00:00Z",
+  "haircutBps": 750,
+  "id": "att.synthetic.001",
+  "issuedAt": "2025-03-01T12:00:00Z",
+  "modelVersion": "1.2.0",
+  "nonce": 42,
+  "provider": "0x5656565656565656565656565656565656565656",
+  "riskScore": "0.275",
+  "schema_version": "0.1.0",
+  "signature": "0x1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+  "verifyingContract": "0x7878787878787878787878787878787878787878"
+}

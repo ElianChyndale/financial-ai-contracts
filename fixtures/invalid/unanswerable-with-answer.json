@@ -1,0 +1,30 @@
+{
+  "contract_type": "benchmark-case",
+  "expected_layer": "semantic",
+  "name": "unanswerable-with-answer",
+  "record": {
+    "abstention_expected": true,
+    "answerable": false,
+    "case_id": "case.synthetic.001",
+    "document_ids": [
+      "doc.synthetic.001"
+    ],
+    "gold_answer": {
+      "currency": "EUR",
+      "numeric_value": "40000000",
+      "text": "EUR 40 million",
+      "unit": "currency"
+    },
+    "gold_evidence_ids": [
+      "ev.synthetic.001"
+    ],
+    "question": "How much was allocated to clean transport?",
+    "question_type": "numerical",
+    "schema_version": "1.0.0",
+    "split": "train",
+    "synthetic": true,
+    "unanswerable_reasons": [
+      "Evidence is absent."
+    ]
+  }
+}

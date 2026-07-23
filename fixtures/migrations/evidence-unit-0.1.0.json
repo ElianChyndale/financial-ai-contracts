@@ -1,0 +1,20 @@
+{
+  "bondId": "bond.synthetic.001",
+  "box": {
+    "x0": 0.1,
+    "x1": 0.9,
+    "y0": 0.2,
+    "y1": 0.3
+  },
+  "documentId": "doc.synthetic.001",
+  "documentSha256": "1212121212121212121212121212121212121212121212121212121212121212",
+  "id": "ev.synthetic.001",
+  "issuerId": "issuer.synthetic.001",
+  "pageIndex": 1,
+  "schema_version": "0.1.0",
+  "section": "Use of proceeds",
+  "sourceTime": "2025-02-01T09:30:00Z",
+  "text": "The synthetic issuer allocated EUR 40 million to clean transport.",
+  "validFrom": "2025-01-01T00:00:00Z",
+  "validUntil": "2026-01-01T00:00:00Z"
+}

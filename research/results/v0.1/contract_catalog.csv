@@ -1,0 +1,6 @@
+contract_type,schema_version,property_count,required_count,python_field_match,typescript_interface,solidity_projection
+benchmark-case,1.0.0,12,12,True,True,False
+evidence-unit,1.0.0,12,12,True,True,False
+experiment-record,1.0.0,13,13,True,True,False
+risk-attestation,1.0.0,18,18,True,True,True
+valuation-scenario,1.0.0,14,14,True,True,False

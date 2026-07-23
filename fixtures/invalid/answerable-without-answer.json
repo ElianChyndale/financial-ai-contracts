@@ -1,0 +1,23 @@
+{
+  "contract_type": "benchmark-case",
+  "expected_layer": "semantic",
+  "name": "answerable-without-answer",
+  "record": {
+    "abstention_expected": false,
+    "answerable": true,
+    "case_id": "case.synthetic.001",
+    "document_ids": [
+      "doc.synthetic.001"
+    ],
+    "gold_answer": null,
+    "gold_evidence_ids": [
+      "ev.synthetic.001"
+    ],
+    "question": "How much was allocated to clean transport?",
+    "question_type": "numerical",
+    "schema_version": "1.0.0",
+    "split": "train",
+    "synthetic": true,
+    "unanswerable_reasons": []
+  }
+}

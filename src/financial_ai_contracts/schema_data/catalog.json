@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "draft": "https://json-schema.org/draft/2020-12/schema",
+  "contracts": {
+    "benchmark-case": "v1/benchmark-case.schema.json",
+    "evidence-unit": "v1/evidence-unit.schema.json",
+    "experiment-record": "v1/experiment-record.schema.json",
+    "risk-attestation": "v1/risk-attestation.schema.json",
+    "valuation-scenario": "v1/valuation-scenario.schema.json"
+  }
+}

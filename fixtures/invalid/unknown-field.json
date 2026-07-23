@@ -1,0 +1,28 @@
+{
+  "contract_type": "evidence-unit",
+  "expected_layer": "schema",
+  "name": "unknown-field",
+  "record": {
+    "bond_id": "bond.synthetic.001",
+    "bounding_box": {
+      "x0": 0.1,
+      "x1": 0.9,
+      "y0": 0.2,
+      "y1": 0.3
+    },
+    "document_hash": "0x1212121212121212121212121212121212121212121212121212121212121212",
+    "document_id": "doc.synthetic.001",
+    "evidence_id": "ev.synthetic.001",
+    "extra": true,
+    "issuer_id": "issuer.synthetic.001",
+    "page": 2,
+    "schema_version": "1.0.0",
+    "section": "Use of proceeds",
+    "source_time": "2025-02-01T09:30:00Z",
+    "text": "The synthetic issuer allocated EUR 40 million to clean transport.",
+    "valid_time": {
+      "end": "2026-01-01T00:00:00Z",
+      "start": "2025-01-01T00:00:00Z"
+    }
+  }
+}
