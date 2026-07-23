@@ -263,9 +263,9 @@ signature authorization, or production fitness.
     cross_language_md = f"""# Cross-Language Conformance
 
 - Canonical JSON and SHA-256 vectors: {len(golden_rows)} checked.
-- Python ? TypeScript canonical byte agreement: covered by checked-in vectors and
+- Python ↔ TypeScript canonical byte agreement: covered by checked-in vectors and
   the TypeScript conformance suite.
-- Python ? TypeScript risk-attestation ABI agreement: checked for the synthetic
+- Python ↔ TypeScript risk-attestation ABI agreement: checked for the synthetic
   golden vector.
 - Solidity source: compiled with Solidity 0.8.30 using the IR pipeline.
 

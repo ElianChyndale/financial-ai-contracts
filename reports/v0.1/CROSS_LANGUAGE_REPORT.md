@@ -1,9 +1,9 @@
 # Cross-Language Conformance
 
 - Canonical JSON and SHA-256 vectors: 5 checked.
-- Python ? TypeScript canonical byte agreement: covered by checked-in vectors and
+- Python ↔ TypeScript canonical byte agreement: covered by checked-in vectors and
   the TypeScript conformance suite.
-- Python ? TypeScript risk-attestation ABI agreement: checked for the synthetic
+- Python ↔ TypeScript risk-attestation ABI agreement: checked for the synthetic
   golden vector.
 - Solidity source: compiled with Solidity 0.8.30 using the IR pipeline.
 

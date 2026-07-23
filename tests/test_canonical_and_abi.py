@@ -15,8 +15,8 @@ def _vectors(path: Path) -> list[dict[str, Any]]:
 
 
 def test_canonical_profile_is_order_independent() -> None:
-    first = {"?": [3, {"b": True, "a": None}], "a": "text"}
-    second = {"a": "text", "?": [3, {"a": None, "b": True}]}
+    first = {"é": [3, {"b": True, "a": None}], "a": "text"}
+    second = {"a": "text", "é": [3, {"a": None, "b": True}]}
     assert canonical_text(first) == canonical_text(second)
     assert record_hash(first) == record_hash(second)
 

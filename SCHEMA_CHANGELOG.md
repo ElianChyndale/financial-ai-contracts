@@ -1,6 +1,6 @@
 # Schema Changelog
 
-## 1.0.0 ? repository v0.1.0
+## 1.0.0 — repository v0.1.0
 
 Initial public contract set:
 

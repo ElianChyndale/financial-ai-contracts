@@ -29,10 +29,10 @@ Represents a provider's bounded risk output, not an execution instruction.
 | --- | --- | --- |
 | `attestation_id` | identifier | stable attestation identifier |
 | `asset_id` | identifier | assessed asset |
-| `risk_score` | decimal string | inclusive range 0?1 |
-| `confidence` | decimal string | inclusive range 0?1 |
+| `risk_score` | decimal string | inclusive range 0–1 |
+| `confidence` | decimal string | inclusive range 0–1 |
 | `evidence_sufficiency` | enum | insufficient, partial, sufficient |
-| `recommended_haircut_bps` | integer | 0?10000 |
+| `recommended_haircut_bps` | integer | 0–10000 |
 | `model_version` | semver string | producing model/config version |
 | `evidence_root` | bytes32 | commitment to ordered evidence references |
 | `evidence_ids` | identifier array | non-empty, unique |
