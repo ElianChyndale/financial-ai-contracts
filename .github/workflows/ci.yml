@@ -68,3 +68,4 @@ jobs:
 
       - name: Require deterministic generated files
         run: git diff --exit-code
+
