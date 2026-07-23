@@ -1,0 +1,6 @@
+contract_type,json_schema,python,typescript,canonical_hash,solidity_abi
+benchmark-case,True,True,True,True,False
+evidence-unit,True,True,True,True,False
+experiment-record,True,True,True,True,False
+risk-attestation,True,True,True,True,True
+valuation-scenario,True,True,True,True,False

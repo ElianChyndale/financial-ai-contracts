@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.coverage
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+node_modules/
+typescript/dist/
+reports/tmp/
+

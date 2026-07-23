@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elianchyndale.github.io/financial-ai-contracts/v1/evidence-unit.schema.json",
+  "title": "EvidenceUnit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "document_id",
+    "document_hash",
+    "page",
+    "section",
+    "text",
+    "bounding_box",
+    "source_time",
+    "valid_time",
+    "issuer_id",
+    "bond_id"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "evidence_id": { "$ref": "#/$defs/identifier" },
+    "document_id": { "$ref": "#/$defs/identifier" },
+    "document_hash": { "$ref": "#/$defs/bytes32" },
+    "page": { "type": "integer", "minimum": 1 },
+    "section": { "type": ["string", "null"], "minLength": 1, "maxLength": 256 },
+    "text": { "type": "string", "minLength": 1, "maxLength": 20000 },
+    "bounding_box": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/boundingBox" }
+      ]
+    },
+    "source_time": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^.+(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "valid_time": { "$ref": "#/$defs/timeInterval" },
+    "issuer_id": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/identifier" }
+      ]
+    },
+    "bond_id": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/identifier" }
+      ]
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+    },
+    "bytes32": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{64}$"
+    },
+    "boundingBox": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x0", "y0", "x1", "y1"],
+      "properties": {
+        "x0": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y0": { "type": "number", "minimum": 0, "maximum": 1 },
+        "x1": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y1": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "timeInterval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^.+(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "end": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "pattern": "^.+(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+        }
+      }
+    }
+  }
+}

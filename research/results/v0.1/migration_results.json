@@ -1,0 +1,16 @@
+[
+  {
+    "contract_type": "evidence-unit",
+    "idempotent": true,
+    "matches_target": true,
+    "source_version": "0.1.0",
+    "target_version": "1.0.0"
+  },
+  {
+    "contract_type": "risk-attestation",
+    "idempotent": true,
+    "matches_target": true,
+    "source_version": "0.1.0",
+    "target_version": "1.0.0"
+  }
+]

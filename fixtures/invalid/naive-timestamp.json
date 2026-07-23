@@ -1,0 +1,37 @@
+{
+  "contract_type": "experiment-record",
+  "expected_layer": "schema",
+  "name": "naive-timestamp",
+  "record": {
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "completed_at": "2025-03-01T12:00:01Z",
+    "dataset_version": "synthetic-1.0.0",
+    "environment": {
+      "dependency_lock_hash": "0x9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a",
+      "platform": "synthetic-fixture",
+      "runtime": "python-3.11"
+    },
+    "experiment_id": "experiment.synthetic.001",
+    "limitations": [
+      "Synthetic fixture; not an external research result."
+    ],
+    "metrics": [
+      {
+        "name": "mrr",
+        "unit": "ratio",
+        "value": "0.75"
+      },
+      {
+        "name": "latency_ms",
+        "unit": "milliseconds",
+        "value": "12.5"
+      }
+    ],
+    "model_version": "baseline-1.0.0",
+    "prompt_version": "none",
+    "retriever": "bm25",
+    "schema_version": "1.0.0",
+    "seed": 42,
+    "started_at": "2025-03-01T12:00:00"
+  }
+}

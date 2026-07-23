@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Install Python package
+        run: python -m pip install -e ".[dev]"
+
+      - name: Install pnpm
+        run: npm install --global pnpm@11.9.0
+
+      - name: Install TypeScript dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check packaged schema mirror
+        run: python scripts/sync-schemas.py --check
+
+      - name: Test Python
+        run: python -m pytest
+
+      - name: Lint Python
+        run: python -m ruff check src tests scripts
+
+      - name: Type-check Python
+        run: python -m mypy src/financial_ai_contracts
+
+      - name: Check TypeScript and Solidity
+        run: pnpm check
+
+      - name: Validate contract catalog
+        run: financial-ai-contracts validate --catalog fixtures/valid
+
+      - name: Verify golden vectors
+        run: financial-ai-contracts verify-golden
+
+      - name: Regenerate reports
+        run: financial-ai-contracts report --output reports/v0.1
+
+      - name: Parse generated artifacts
+        run: python scripts/check-artifacts.py
+
+      - name: Require deterministic generated files
+        run: git diff --exit-code
+

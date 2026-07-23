@@ -1,0 +1,20 @@
+{
+  "name": "@elianchyndale/financial-ai-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.9.0",
+  "description": "TypeScript and Solidity conformance checks for Financial AI Contracts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test typescript/test/*.test.mjs",
+    "solidity:check": "node scripts/compile-solidity.mjs",
+    "check": "tsc -p tsconfig.json && node --test typescript/test/*.test.mjs && node scripts/compile-solidity.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.17.1",
+    "ethers": "6.15.0",
+    "solc": "0.8.30",
+    "typescript": "5.8.3"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elianchyndale.github.io/financial-ai-contracts/v1/risk-attestation.schema.json",
+  "title": "RiskAttestation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "attestation_id",
+    "asset_id",
+    "risk_score",
+    "confidence",
+    "evidence_sufficiency",
+    "recommended_haircut_bps",
+    "model_version",
+    "evidence_root",
+    "evidence_ids",
+    "issued_at",
+    "expires_at",
+    "decision_code",
+    "provider",
+    "signature",
+    "nonce",
+    "chain_id",
+    "verifying_contract"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "attestation_id": { "$ref": "#/$defs/identifier" },
+    "asset_id": { "$ref": "#/$defs/identifier" },
+    "risk_score": { "$ref": "#/$defs/probability" },
+    "confidence": { "$ref": "#/$defs/probability" },
+    "evidence_sufficiency": {
+      "enum": ["insufficient", "partial", "sufficient"]
+    },
+    "recommended_haircut_bps": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000
+    },
+    "model_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$"
+    },
+    "evidence_root": { "$ref": "#/$defs/bytes32" },
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/identifier" }
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^.+(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^.+(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "decision_code": {
+      "enum": ["approve", "review", "reject", "abstain"]
+    },
+    "provider": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{40}$"
+    },
+    "signature": {
+      "type": ["string", "null"],
+      "pattern": "^0x(?:[0-9a-f]{2})+$"
+    },
+    "nonce": { "$ref": "#/$defs/uint256" },
+    "chain_id": { "$ref": "#/$defs/uint256" },
+    "verifying_contract": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{40}$"
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+    },
+    "bytes32": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{64}$"
+    },
+    "decimal": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]{1,6})?$"
+    },
+    "probability": {
+      "allOf": [
+        { "$ref": "#/$defs/decimal" },
+        {
+          "type": "string",
+          "pattern": "^(?:0(?:\\.[0-9]{1,6})?|1(?:\\.0{1,6})?)$"
+        }
+      ]
+    },
+    "uint256": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9][0-9]*)$",
+      "maxLength": 78
+    }
+  }
+}
